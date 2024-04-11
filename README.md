@@ -1,0 +1,2 @@
+# graphQLexplo
+Exploration of graphQL
