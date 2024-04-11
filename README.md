@@ -1,5 +1,5 @@
 # graphQLexplo
 Exploration of graphQL
 
-## Ressources : 
+## Ressources
 - [graphql.org](https://graphql.org/)
