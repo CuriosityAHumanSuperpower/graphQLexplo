@@ -2,7 +2,7 @@
 Exploration of graphQL
 
 ```bash
-run nodemon server.jsm
+nodemon server.jsm
 ```
 
 ## Ressources
