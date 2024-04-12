@@ -1,0 +1,7 @@
+query getSingleUser($userID: Int!) {
+  user(id: $userID) {
+    name
+    age
+    shark
+  }
+}

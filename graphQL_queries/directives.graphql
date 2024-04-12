@@ -1,0 +1,11 @@
+query getUsers($shark: String, $age: Boolean!, $id: Boolean!) {
+  users(shark: $shark){
+    ...userFields
+  }
+}
+
+fragment userFields on Person {
+  name
+  age @skip(if: $age)
+  id @include(if: $id)
+}

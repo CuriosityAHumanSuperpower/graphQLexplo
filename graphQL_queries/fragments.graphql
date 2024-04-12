@@ -1,0 +1,14 @@
+query getUsersWithFragments($userAID: Int!, $userBID: Int!) {
+  userA: user(id: $userAID) {
+    ...userFields
+  },
+  userB: user(id: $userBID) {
+    ...userFields
+  }
+}
+
+fragment userFields on Person {
+  name
+  age
+  shark
+}

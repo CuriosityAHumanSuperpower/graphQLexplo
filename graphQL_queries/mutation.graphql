@@ -1,0 +1,11 @@
+mutation updateUser($id: Int!, $name: String!, $age: Int) {
+  updateUser(id: $id, name:$name, age: $age){
+    ...userFields
+  }
+}
+
+fragment userFields on Person {
+  name
+  age
+  shark
+}
