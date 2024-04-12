@@ -21,6 +21,9 @@ var schema = buildSchema(`
         age : Int
         shark : String
     }
+    type Mutation {
+      updateUser(id : Int!, name : String!, age :Int) : Person
+    }
 `)
 
 // Root resolver
@@ -33,9 +36,22 @@ var retrieveUsers  = ({shark}) => {//return a list of users
     return users
 } 
 
+var updateUser = ({id, name, age}) => {
+  var user_ = undefined
+  users.forEach(user => {
+    if(user.id == id){
+      user.name = name
+      user.age = age
+      user_= user
+    }
+  })
+  return user_
+}
+
 var root = { 
     user : getUser, 
-    users: retrieveUsers
+    users: retrieveUsers,
+    updateUser,
 }
 
 // Sample users
